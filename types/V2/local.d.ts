@@ -1,7 +1,6 @@
 import { cycle, initiator, phase, schedule } from '../global';
 
 
-
 export class Local {
   /**
    * Close the connection to the robot. It's important if you want to send commands via the official mobile app via Local network. There's a maximum of 1 connection at any time in local network, so if your app is connected, the official mobile app only works via cloud access.
@@ -231,7 +230,7 @@ export class Local {
    */
   on(event: 'state', callback: (data: RobotState) => void): this;
 }
-interface RobotState {
+export interface RobotState {
   netinfo: {
     dhcp: boolean,
     addr: number,

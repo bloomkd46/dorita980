@@ -1,7 +1,6 @@
 import { cycle, initiator, langs, phase } from '../global';
 
 
-
 export class Local {
   /**
    * Close the connection to the robot. It's important if you want to send commands via the official mobile app via Local network. There's a maximum of 1 connection at any time in local network, so if your app is connected, the official mobile app only works via cloud access.
@@ -195,22 +194,22 @@ export class Local {
    */
   on(event: 'state', callback: (data: RobotState) => void): this;
 }
-interface Region {
+export interface Region {
   region_id: string;
   type: 'zid' | 'rid';
 }
-interface Map {
+export interface Map {
   pmap_id: string;
   regions: [Region];
   user_pmapv_id: string;
 }
-interface OrderedMap {
+export interface OrderedMap {
   ordered?: 1;
   pmap_id: string;
   regions: Region[];
   user_pmapv_id: string;
 }
-interface RobotState {
+export interface RobotState {
   audio: { volume: number; },
   batPct: number,
   batteryType: 'F12433011' | string,

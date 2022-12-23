@@ -6,6 +6,14 @@ import { Cloud as CloudV3 } from './V3/cloud';
 import { Local as LocalV3 } from './V3/local';
 
 
+export type * as V1 from './V1/cloud';
+export type * as V1 from './V1/local';
+export type * as V2 from './V2/cloud';
+export type * as V2 from './V2/local';
+export type * as V3 from './V3/cloud';
+export type * as V3 from './V3/local';
+
+export type * from './global';
 
 export function Cloud(username: string, password: string, version?: number): Partial<CloudV2 & CloudV3> & (CloudV2 | CloudV3);
 export function Cloud(username: string, password: string, version: 1): CloudV1;

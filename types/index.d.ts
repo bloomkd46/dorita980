@@ -47,7 +47,7 @@ export function Local(blid: string, password: string, ip: string, version: 3, in
  *   });
  * ```
  */
-export function getRobotIP(callback: (err, ip: string) => void): void;
+export function getRobotIP(callback: (err: unknown, ip: string) => void): void;
 /**
  * You can also use {@link discovery} method to get all the robots discovery data:
  * 
@@ -61,10 +61,10 @@ export function getRobotIP(callback: (err, ip: string) => void): void;
  * });
  * ```
  */
-export function discovery(callback: (err, data: Omit<PublicInfo, 'blid'>) => void): void;
-export function getRobotPublicInfo(callback: (err, data: PublicInfo) => void): void;
+export function discovery(callback: (err: unknown, data: Omit<PublicInfo, 'blid'>) => void): void;
+export function getRobotPublicInfo(ip: string, callback: (err: unknown, data: PublicInfo) => void): void;
 
-interface PublicInfo {
+export interface PublicInfo {
   ver: '2' | string,
   hostname: string,
   robotname: string,

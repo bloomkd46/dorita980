@@ -1,8 +1,9 @@
 {
-  "name": "dorita980",
-  "version": "3.1.11",
-  "description": "Unofficial iRobot Roomba 980 and wifi other enabled series library sdk",
+  "name": "@bloomkd46/dorita980",
+  "version": "1.0.0",
+  "description": "Unofficial iRobot Roomba 980 and wifi other enabled series library sdk (For use with the homebridge-iRobot repository)",
   "main": "./index.js",
+  "types": "./types/index.d.ts",
   "directories": {
     "test": "test"
   },
@@ -22,20 +23,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koalazak/dorita980.git"
+    "url": "git+https://github.com/bloomkd46/dorita980.git"
   },
   "devDependencies": {
+    "@types/node": "^18.11.17",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "mocha": "^3.1.2",
-    "istanbul": "^0.4.0",
-    "semistandard": "^9.1.0",
     "eslint": "^4.18.2",
-    "eslint-config-standard": "^6.2.0",
     "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.0",
     "eslint-plugin-promise": "^3.0.0",
     "eslint-plugin-standard": "^2.0.1",
-    "proxyquire": "^1.7.10"
+    "istanbul": "^0.4.0",
+    "mocha": "^3.1.2",
+    "proxyquire": "^1.7.10",
+    "semistandard": "^9.1.0"
   },
   "keywords": [
     "unofficial",
@@ -58,14 +60,13 @@
     "cleaner",
     "IoT"
   ],
-  "author": "koalazak <zak.tux@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/koalazak/dorita980/issues"
+    "url": "https://github.com/bloomkd46/dorita980/issues"
   },
-  "homepage": "https://github.com/koalazak/dorita980#readme",
+  "homepage": "https://github.com/bloomkd46/dorita980#readme",
   "dependencies": {
-    "mqtt": "^2.15.0",
+    "mqtt": "^4.3.7",
     "request": "^2.74.0",
     "request-promise": "^4.1.1"
   }

@@ -1,6 +1,6 @@
 {
   "name": "@bloomkd46/dorita980",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unofficial iRobot Roomba 980 and wifi other enabled series library sdk (For use with the homebridge-iRobot repository)",
   "main": "./index.js",
   "types": "./types/index.d.ts",

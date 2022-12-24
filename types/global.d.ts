@@ -1,4 +1,4 @@
-export type cycle = 'none' | 'clean' | 'spot';
+export type cycle = 'none' | 'clean' | 'spot' | 'dock';
 /**
  * Known phase strings and their meanings:
  * 

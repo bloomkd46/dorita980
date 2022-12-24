@@ -63,6 +63,7 @@ export function getRobotIP(callback: (err: unknown, ip: string) => void): void;
  */
 export function discovery(callback: (err: unknown, data: Omit<PublicInfo, 'blid'>) => void): void;
 export function getRobotPublicInfo(ip: string, callback: (err: unknown, data: PublicInfo) => void): void;
+export function getRobotByBlid(blid: string, callback: (err: unknown, data: PublicInfo) => void): void;
 
 export interface PublicInfo {
   ver: '2' | string,

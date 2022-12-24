@@ -22,5 +22,6 @@ module.exports = {
   Local: local,
   getRobotIP: discovery.discovery,
   discovery: (cb) => discovery.discovery(cb, true),
-  getRobotPublicInfo: discovery.getRobotPublicInfo
+  getRobotPublicInfo: discovery.getRobotPublicInfo,
+  getRobotByBlid: (blid, cb) => discovery.discovery(cb, true, blid)
 };

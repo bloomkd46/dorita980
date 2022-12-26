@@ -19,12 +19,13 @@ export type cycle = 'none' | 'clean' | 'spot' | 'dock';
  * | pause | Paused* |
  * | hmPostMsn | Going home after mission |
  * | '' (empty string) | None* |
+ * | evac | Emptying Bin (Plus+ Models Only) |
  * 
  * Phases, marked with asterisk (*), have not been seen being reported by Roomba 930. All the definitions are taken from Roomba980-Python.
  * 
  * @see [openhab.org/addons/bindings/irobot/](https://www.openhab.org/addons/bindings/irobot/)
  */
-export type phase = 'charge' | 'new' | 'run' | 'resume' | 'hmMidMsn' | 'recharge' | 'stuck' | 'hmUsrDock' | 'dock' | 'dockend' | 'cancelled' | 'stop' | 'pause' | 'hmPostMsn' | '';
+export type phase = 'charge' | 'new' | 'run' | 'resume' | 'hmMidMsn' | 'recharge' | 'stuck' | 'hmUsrDock' | 'dock' | 'dockend' | 'cancelled' | 'stop' | 'pause' | 'hmPostMsn' | '' | 'evac';
 /**
  * Error codes. Data type is string in order to be able to utilize mapping to human-readable strings.
  * 

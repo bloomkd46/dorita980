@@ -64,16 +64,31 @@ export function getRobotIP(callback: (err: unknown, ip: string) => void): void;
 export function discovery(callback: (err: unknown, data: Omit<PublicInfo, 'blid'>) => void): void;
 export function getRobotPublicInfo(ip: string, callback: (err: unknown, data: PublicInfo) => void): void;
 export function getRobotByBlid(blid: string, callback: (err: unknown, data: PublicInfo) => void): void;
-
+/** Fetches your robots from the cloud (you need your iRobot account credentials (email and password) )*/
+export function getPasswordCloud(email: string, password: string, apiKey?: string): Promise<CloudDevice[]>;
+export function getPassword(ip: string, firmwareVersion: '1'): Promise<{ blid: string, password: string; }>;
+export function getPassword(ip: string): Promise<PublicInfo & { password: string; }>;
+export interface CloudDevice {
+  blid: string,
+  password: string,
+  sku: string,
+  softwareVer: string,
+  name: string,
+  cap: Record<string, number>;
+  svcDeplId: string,
+  user_cert: boolean;
+}
 export interface PublicInfo {
-  ver: '2' | string,
+  ver: '2' | '3',
   hostname: string,
   robotname: string,
+  robotid: string;
   ip: string,
   mac: string,
   sw: string,
   sku: string,
   nc: number,
   proto: 'mqtt' | string;
+  cap: Record<string, number>;
   blid: string;
 }

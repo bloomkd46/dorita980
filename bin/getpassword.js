@@ -77,7 +77,7 @@ function getBlid (rid, pass) {
       console.log('Username/blid: ' + blid);
       console.log('Use this credentials in dorita980 lib :)');
     } else {
-      console.log('Unespected error getting username/blid');
+      console.log('Unexpected error getting username/blid');
     }
   });
 }

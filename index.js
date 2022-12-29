@@ -6,6 +6,8 @@ let localV1 = require('./lib/v1/local');
 let localV2 = require('./lib/v2/local');
 
 let discovery = require('./lib/discovery');
+const { getPasswordCloud } = require('./lib/getPasswordCloud');
+const { getPassword } = require('./lib/getPassword');
 
 function cloud (username, password, version) {
   if (version === 1) return cloudV1(username, password);
@@ -23,5 +25,7 @@ module.exports = {
   getRobotIP: discovery.discovery,
   discovery: (cb) => discovery.discovery(cb, true),
   getRobotPublicInfo: discovery.getRobotPublicInfo,
-  getRobotByBlid: (blid, cb) => discovery.discovery(cb, true, blid)
+  getRobotByBlid: (blid, cb) => discovery.discovery(cb, true, blid),
+  getPasswordCloud,
+  getPassword
 };
